@@ -82,3 +82,21 @@ nav.navigation .navigationList li:first-child {
 .teaser .button:hover {
   background-color: #1D1661;
 }
+
+@media screen and (max-width: 600px) {
+  .teaser .top {
+    font-size: 14px;
+  }
+
+  .teaser .headline {
+    font-size: 40px;
+  }
+
+  .teaser .description {
+    font-size: 16px;
+  }
+
+  .teaser {
+    text-align: center;
+  }
+}
