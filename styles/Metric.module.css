@@ -1,0 +1,73 @@
+.metric {
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #ECECEC;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.metric:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+.metric .head {
+    display: table;
+    width: 100%;
+}
+
+.metric .title {
+    display: table-cell;
+    font-size: 14px;
+}
+
+.metric .metricScore {
+    display: table-cell;
+    text-align: right;
+    font-size: 14px;
+}
+
+.metric .bar {
+    margin-top: 15px;
+    border-radius: 10px;
+    height: 8px;
+    width: 100%;
+    background-color: #EAEAEA;
+    position: relative;
+    overflow: hidden;
+}
+
+.metric .bar .barInner {
+    background: -webkit-linear-gradient(180deg, #DA071C, #712792);
+    height: 100%;
+    border-radius: 10px;
+}
+
+.accordion {
+    margin-top: 20px;
+}
+
+.accordion .accordionArrow {
+    text-align: center;
+}
+
+.accordion .accordionDescription {
+    font-size: 12px;
+    color: #666;
+    padding-top: 20px;
+}
+
+.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.reverse {
+    transform: rotate(180deg);
+}

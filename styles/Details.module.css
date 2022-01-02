@@ -1,0 +1,138 @@
+.container {
+    background: rgb(70,24,24);
+    background: linear-gradient(180deg, rgba(70,24,24,1) 0%, rgba(12,13,17,1) 400px);
+    font-family: "Spartan", sans-serif;
+}
+
+.detailsContainer {
+    padding: 50px;
+}
+
+.detailsInner {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 25px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.detailsHead {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.detailsIcon {
+    width: 175px;
+    height: 175px;
+    background-color: #DDD;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.detailsHeadline {
+    flex-grow: 4;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.detailsHeadline h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0 0 20px;
+}
+
+.detailsHeadline .description {
+    font-size: 14px;
+    color: #838383;
+}
+
+.detailsScore {
+    text-align: center;
+    padding: 30px;
+    border-left: 1px solid #DCDCDC;
+}
+
+.score {
+    font-size: 50px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(122deg, #712792, #DA071C);
+    background: linear-gradient(122deg, #712792, #DA071C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.scoreDescription {
+    font-size: 16px;
+    white-space: nowrap;
+    color: #A2A2A2;
+}
+
+.tagContainer {
+    margin-top: 40px;
+}
+
+.tagContainer a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #979797;
+    padding: 10px 15px;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+.statistics {
+    margin-top: 100px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+
+.statistics h2 {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 500;
+}
+
+.statistics .keymetrics {
+    display: table-cell;
+    padding: 25px 70px 25px 0;
+}
+
+.statistics .links {
+    display: table-cell;
+    border-left: 1px solid #DCDCDC;
+    padding: 25px 0 25px 70px;
+}
+
+.statistics .metricsContainer {
+    margin-top: 40px;
+}
+
+.addtionalContent {
+    margin-top: 130px;
+}
+
+.linkContainer {
+    margin-top: 50px;
+}
+
+.linkContainer a {
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #979797;
+    padding: 15px 20px;
+    border-radius: 30px;
+    margin-right: 10px;
+    transition: all .3s ease;
+}
+
+.linkContainer a:hover {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+}

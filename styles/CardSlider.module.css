@@ -1,0 +1,18 @@
+
+.cardsContainer {
+    overflow: hidden;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.cardsInner {
+    white-space: nowrap;
+}
+
+.cardsTitle {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    font-family: "Spartan", sans-serif;
+    margin-bottom: 75px;
+}

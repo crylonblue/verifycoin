@@ -1,42 +1,11 @@
 .main {
   background-color: #0C0D11;
-  min-height: 100vh;
   width: 100%;
   color: #fff;
   background-image: url("../public/bg.png");
-  background-size: cover;
-  background-position: center;
-}
-
-nav.navigation {
-  padding: 50px;
-  max-width: 1440px;
-  margin: auto;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-nav.navigation .logo {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-nav.navigation .navigationList {
-  flex-grow: 4;
-  text-align: right;
-  font-family: "Spartan", sans-serif;
-}
-
-nav.navigation .navigationList li {
-  list-style: none;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 80px;
-}
-
-nav.navigation .navigationList li:first-child {
-  margin: 0px !important;
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
 }
 
 .teaser {
@@ -44,6 +13,7 @@ nav.navigation .navigationList li:first-child {
   font-family: "Spartan", sans-serif;
   padding: 50px;
   max-width: 1440px;
+  text-align: center;
 }
 
 .teaser .top {
@@ -63,6 +33,7 @@ nav.navigation .navigationList li:first-child {
 .teaser .description {
   font-size: 20px;
   font-weight: 300;
+  margin-top: 50px;
 }
 
 .teaser .button {
