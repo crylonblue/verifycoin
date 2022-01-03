@@ -28,9 +28,10 @@
 
 .cardLeft {
     flex-grow: 4;
+    padding-right: 20px;
 }
 
-.cardRight .icon{
+.cardRight .icon {
     width: 100px;
     height: 100px;
     background-color: #333;
@@ -67,5 +68,25 @@
 @keyframes slideInfinite {
     100% {
         transform: translateX(calc(-450px * 4));
+    }
+}
+
+@media screen and (max-width: 1028px) {
+    .card {
+        width: 350px;
+        overflow: hidden;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .cardRight .icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .score {
+        font-size: 40px;
     }
 }

@@ -1,27 +1,31 @@
 .searchInputContainer {
     position: relative;
     width: 100%;
-    max-width: 750px;
     height: 75px;
+    padding: 0px 50px 0 50px;
+}
+
+.searchInputInner {
     margin: 0 auto;
+    max-width: 1440px;
 }
 
 .searchInput {
     position: absolute;
-    border: 1px solid #485BC5;
-    background: rgba(16, 14, 34, 0.6);
+    border: none;
     padding: 25px;
     color: #fff;
     border-radius: 10px;
     font-family: "Spartan", sans-serif;
     font-size: 20px;
     width: 100%;
+    border: 1px solid transparent;
     max-width: 750px;
     transition: all .3s ease;
 }
 
 .searchInput.focused {
-    background: rgba(32, 27, 74, 1)
+    background: rgba(16, 14, 34, 0.95)
 }
 
 .topContent {
@@ -75,7 +79,7 @@
 }
 
 .searchResult:hover {
-    background-color: rgba(0, 0, 0, 0.3)
+    background-color: rgba(255, 255, 255, 0.1)
 }
 
 .resultIcon {

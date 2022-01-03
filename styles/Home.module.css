@@ -54,6 +54,20 @@
   background-color: #1D1661;
 }
 
+@media screen and (max-width: 1028px) {
+  .teaser .top {
+    font-size: 20px;
+  }
+
+  .teaser .headline {
+    font-size: 40px;
+  }
+
+  .teaser .description {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .teaser .top {
     font-size: 14px;

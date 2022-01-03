@@ -5,6 +5,7 @@ import Metric from '../../components/metric.component'
 import { sanityClient } from '../../sanity'
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
+import ReportSearchBar from '../../components/reportSearchBar.component'
 
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
@@ -38,6 +39,7 @@ export default function Details({ report }) {
         </Head>
         <section className={styles.main}>
             <Navigation></Navigation>
+            <ReportSearchBar></ReportSearchBar>
             <section className={styles.detailsContainer}>
                 <section className={styles.detailsInner}>
                     <div className={styles.detailsHead}>
