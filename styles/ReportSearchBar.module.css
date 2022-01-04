@@ -5,6 +5,10 @@
     padding: 0px 50px 0 50px;
 }
 
+.searchInputContainer:focus {
+    outline: none;
+}
+
 .searchInputInner {
     margin: 0 auto;
     max-width: 1440px;

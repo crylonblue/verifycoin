@@ -6,6 +6,10 @@
     margin: 0 auto;
 }
 
+.searchInputContainer:focus {
+    outline: none;
+}
+
 .searchInput {
     position: absolute;
     border: 1px solid #485BC5;
