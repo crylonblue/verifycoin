@@ -34,6 +34,7 @@ export default function Details({ report }) {
         <Head>
             <title>verifycoin</title>
             <meta name="description" content="verifycoin" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
             <link rel="icon" href="/favicon.ico" />
             <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700&display=swap" rel="stylesheet" />
         </Head>
