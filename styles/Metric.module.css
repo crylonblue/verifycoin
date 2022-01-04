@@ -61,6 +61,10 @@
     padding-top: 20px;
 }
 
+.accordion .accordionDescription a {
+    color: #6258E1;
+}
+
 .active {
     display: block;
 }

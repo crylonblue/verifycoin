@@ -19,7 +19,6 @@ function parseScore(int) {
 
 
 export default function Details({ report }) {
-    console.log(report);
     const { image, title, metrics, description, score, scoreDescription, tags, additionalContent, links} = report;
     
     function getBlockContent() {

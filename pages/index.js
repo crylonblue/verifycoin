@@ -6,6 +6,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import CardSlider from '../components/cardSlider.component'
 import SearchBar from '../components/searchBar.component'
 
+
 const builder = imageUrlBuilder(sanityClient)
 function urlFor(source) {
     return builder.image(source)
