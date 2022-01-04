@@ -8,6 +8,7 @@
 .searchInputInner {
     margin: 0 auto;
     max-width: 1440px;
+    position: relative;
 }
 
 .searchInput {
@@ -121,5 +122,24 @@
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .searchInputContainer {
+        padding: 0 25px;
+        height: 50px;
+    }
+
+    .searchInput {
+        padding: 13px;
+    }
+
+    .searchIcon {
+        padding-right: 15px;
+    }
+
+    .input {
+        font-size: 14px;
     }
 }

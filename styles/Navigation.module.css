@@ -29,3 +29,10 @@ nav.navigation .navigationList li {
 nav.navigation .navigationList li:first-child {
     margin: 0px !important;
 }
+
+
+@media screen and (max-width: 480px) {
+    nav.navigation {
+        padding: 25px;
+    }
+}

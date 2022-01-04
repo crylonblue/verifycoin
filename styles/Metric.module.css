@@ -71,3 +71,13 @@
 .reverse {
     transform: rotate(180deg);
 }
+
+@media screen and (max-width: 480px) {
+    .metric {
+        padding: 20px 0;
+    }
+
+    .metric:hover {
+        background: #fff;
+    }
+}

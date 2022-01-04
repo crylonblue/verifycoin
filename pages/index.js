@@ -25,10 +25,12 @@ export default function Home(props) {
       <section className={styles.main}>
         <Navigation></Navigation>
         <section className={styles.teaser}>
-          <div className={styles.top}>Helping the movement.</div>
-          <div className={styles.headline}>Helping people understand.</div>
-          <SearchBar></SearchBar>
-          <div className={styles.description}>Fraud protection for everyone. Check for crypto project safety instantly.</div>
+          <div className={styles.aligner}>
+            <div className={styles.top}>Helping the movement.</div>
+            <div className={styles.headline}>Helping people understand.</div>
+            <SearchBar></SearchBar>
+            <div className={styles.description}>Fraud protection for everyone. Check for crypto project safety instantly.</div>
+          </div>
         </section>
       </section>
       <CardSlider reports={reports}></CardSlider>

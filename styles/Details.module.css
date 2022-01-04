@@ -83,6 +83,7 @@
     padding: 10px 15px;
     border-radius: 30px;
     margin-right: 10px;
+    display: inline-block;
 }
 
 .statistics {
@@ -135,4 +136,106 @@
     background-color: #000;
     color: #fff;
     border: 1px solid #000;
+}
+
+
+@media screen and (max-width: 1028px) and (min-width: 801px) {
+    .detailsHeadline {
+        padding: 0 20px;
+    }
+
+    .detailsHeadline h1 {
+        font-size: 30px;
+    }
+
+    .detailsHeadline .description {
+        font-size: 12px;
+    }
+
+    .detailsIcon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .detailsScore {
+        padding: 0 10px;
+    }
+
+    .scoreDescription {
+        font-size: 10px;
+    }
+
+    .statistics .keymetrics {
+        padding-right: 25px;
+    }
+
+    .statistics .links {
+        padding-left: 25px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .detailsContainer {
+        padding: 10px;
+    }
+    .detailsInner {
+        padding: 25px;
+    }
+
+    .detailsIcon {
+        order: 1;
+    }
+
+    .detailsHead {
+        flex-direction: column;
+    }
+
+    .detailsHeadline {
+        padding: 0 0 30px 0;
+        margin-top: 30px;
+        text-align: center;
+        order: 3;
+        border-bottom: 1px solid #DCDCDC;
+    }
+
+    .detailsHeadline h1 {
+        font-size: 30px;
+    }
+
+    .detailsScore {
+        order: 2;
+        border: none;
+        margin-top: 15px;
+    }
+
+    .detailsHeadline .description {
+        font-size: 12px;
+    }
+
+    .statistics {
+        display: block;
+        margin-top: 50px;
+    }
+
+    .statistics .keymetrics {
+        display: block;
+        padding: 0;
+    }
+
+    .statistics .keymetrics h2 {
+        font-size: 20px;
+    }
+
+    .statistics .metricsContainer {
+        margin-top: 10px;
+    }
+
+    .statistics .links {
+        display: block;
+        border: none;
+        padding: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
 }

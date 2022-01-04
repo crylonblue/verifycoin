@@ -9,6 +9,8 @@
     border: 1px solid #41197A;
     transition: all .3s ease;
     animation: slideInfinite 40s linear infinite;
+    position: relative;
+    vertical-align: top;
 }
 
 .card:hover {
@@ -23,12 +25,19 @@
 .cardInner {
     display: flex;
     flex-direction: row;
+    overflow-x: hidden;
+    white-space: normal;
 }
 
 
 .cardLeft {
-    flex-grow: 4;
-    padding-right: 20px;
+    flex-grow: 1;
+    width: 100%;
+    text-overflow: ellipsis;
+}
+
+.cardRight {
+    flex: 0 0 120px;
 }
 
 .cardRight .icon {
@@ -73,12 +82,15 @@
 
 @media screen and (max-width: 1028px) {
     .card {
-        width: 350px;
-        overflow: hidden;
+        width: 300px;
     }
 
     .title {
         font-size: 18px;
+    }
+
+    .cardRight {
+        flex: 0 0 75px;
     }
 
     .cardRight .icon {
@@ -88,5 +100,41 @@
 
     .score {
         font-size: 40px;
+    }
+
+    @keyframes slideInfinite {
+        100% {
+            transform: translateX(calc(-300px * 4));
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 200px;
+        padding: 20px;
+        margin: 0 15px;
+    }
+
+    .title {
+        font-size: 12px;
+    }
+    
+    .description {
+        font-size: 9px;
+    }
+
+    .cardRight {
+        flex: 0 0 30px;
+    }
+
+    .cardRight .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .score {
+        font-size: 20px;
     }
 }

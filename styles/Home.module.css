@@ -9,11 +9,15 @@
 }
 
 .teaser {
-  margin: 50px auto;
+  margin: 0 auto;
   font-family: "Spartan", sans-serif;
-  padding: 50px;
+  padding: 0 50px;
   max-width: 1440px;
   text-align: center;
+  height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .teaser .top {
@@ -83,5 +87,26 @@
 
   .teaser {
     text-align: center;
+    height: calc(100vh - 150px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .teaser {
+    padding: 25px;
+  }
+
+  .teaser .top {
+    font-size: 12px;
+  }
+
+  .teaser .headline {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  .teaser .description {
+    font-size: 12px;
+    margin-top: 15px;
   }
 }
