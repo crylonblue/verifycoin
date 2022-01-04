@@ -19,7 +19,8 @@ function parseScore(int) {
 
 
 export default function Details({ report }) {
-    const { image, title, description, score, scoreDescription, communityScore, communityDescription, whaleDescription, whaleScore, foundersDescription, foundersScore, tokenomicsScore, tokenomicsDescription, tags, additionalContent, links} = report;
+    console.log(report);
+    const { image, title, metrics, description, score, scoreDescription, tags, additionalContent, links} = report;
     
     function getBlockContent() {
         if(additionalContent) {
@@ -34,9 +35,6 @@ export default function Details({ report }) {
         <Head>
             <title>verifycoin</title>
             <meta name="description" content="verifycoin" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
-            <link rel="icon" href="/favicon.ico" />
-            <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;700&display=swap" rel="stylesheet" />
         </Head>
         <section className={styles.main}>
             <Navigation></Navigation>
@@ -66,10 +64,11 @@ export default function Details({ report }) {
                         <div className={styles.keymetrics}>
                             <h2>Key metrics:</h2>
                             <div className={styles.metricsContainer}>
-                                <Metric title="Community" percent={communityScore} description={communityDescription}></Metric>
-                                <Metric title="Whale Wallets" percent={whaleScore} description={whaleDescription}></Metric>
-                                <Metric title="Founders credibility" percent={foundersScore} description={foundersDescription}></Metric>
-                                <Metric title="Tokenomics" percent={tokenomicsScore} description={tokenomicsDescription}></Metric>
+                                {
+                                    metrics.map((metric) => (
+                                        <Metric title={metric.metricName} percent={metric.metricScore} description={metric.metricReasoning} key={metric._key}></Metric>
+                                    ))
+                                }
                             </div>
                         </div>
                         <div className={styles.links}>

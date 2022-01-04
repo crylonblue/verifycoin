@@ -43,6 +43,7 @@
 .metric .bar .barInner {
     background: -webkit-linear-gradient(180deg, #DA071C, #712792);
     height: 100%;
+    width: 0;
     border-radius: 10px;
 }
 

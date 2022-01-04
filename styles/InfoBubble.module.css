@@ -1,0 +1,45 @@
+.infoWrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.infoWrapper:hover .bubble {
+    display: block;
+}
+
+.infoIcon {
+    fill: #9c9c9c;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.infoIcon:hover {
+    fill: #777;
+}
+
+.bubble {
+    width: 18rem;
+    background: #fff;
+    position: absolute;
+    display: none;
+    color: #838383;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 0.3rem;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+    transform: translate(calc(-50% + 7px), calc(-100% - 7px));
+    font-size: 10px;
+}
+
+.bubble::after {
+    content: '';
+    display: inline-block;
+    width: 1rem;
+    height: 0.5rem;
+    background: #fff;
+    position: absolute;
+    bottom: -0.5em;
+    left: calc(50% - 0.5rem);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
