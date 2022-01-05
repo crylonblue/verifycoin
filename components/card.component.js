@@ -24,14 +24,14 @@ export default function Card (props) {
                             {title}
                         </div>
                         <div className={styles.description}>
-                            {
-                                tags.map((tag, index) => {
+                            {   
+                                tags.length ? tags.map((tag, index) => {
                                     if (index + 1 == tags.length) {
                                         return tag
                                     } else {
                                         return tag + ", "
                                     }
-                                })
+                                }) : ""
                             }
                         </div>
                         <div className={styles.score}>

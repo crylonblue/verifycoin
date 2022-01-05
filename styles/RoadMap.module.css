@@ -1,0 +1,138 @@
+.roadMap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blankLeft, .blankRight, .contentLeft, .contentRight {
+    flex: 50%;
+    min-height: 200px;
+    position:relative;
+}
+
+.blankLeft, .contentLeft {
+    border-right: 2px dashed #EC2A2A;
+}
+
+.roadMap div:nth-last-of-type(2) {
+    border-right: none !important;
+}
+
+.active:before, .active:before {
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0.15);
+    border: 5px solid rgba(255, 255, 255, 1) !important;
+    border-radius: 500%;
+    background: #EC2A2A !important;
+    height: 20px;
+    width: 20px;
+    left: -16px !important;
+}
+
+.blankRight:before, .contentRight:before {
+    position: absolute;
+    left: -14px;
+    top: -5px;
+    content: " ";
+    border-radius: 500%;
+    background-color: #0C0D11;
+    height: 20px;
+    width: 20px;
+    border: 3px solid rgba(255, 0, 0, 1);
+}
+
+.contentLeft, .contentRight {
+    padding-bottom: 100px;
+}
+
+.contentLeft, .contentRight {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.contentLeft {
+    text-align: right;
+}
+
+.headline {
+    color: #fff;
+    font-family: "Spartan", sans-serif;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.description {
+    font-family: "Spartan", sans-serif;
+    font-weight: 400;
+    color: #858585;
+    font-size: 14px;
+}
+
+.bigHeadline {
+    font-size: 180px;
+    font-weight: bold;
+    overflow: hidden;
+    background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.3));
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.3));
+    opacity: 0.2;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: "Spartan", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    margin: 200px 0 50px 0;
+}
+
+@media screen and (max-width: 1440px) {
+    .bigHeadline {
+        font-size: 120px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .roadMap {
+        display: block;
+    }
+    .blankLeft, .blankRight {
+        display: none;
+    }
+
+    .contentRight, .contentLeft {
+        display: block;
+        margin-left: 60px;
+        flex: none;
+        border-right: none;
+        border-left: 2px dashed #EC2A2A;
+    }
+
+    .contentLeft:before {
+        position: absolute;
+        left: -14px;
+        top: -5px;
+        content: " ";
+        border-radius: 500%;
+        background-color: #0C0D11;
+        height: 20px;
+        width: 20px;
+        border: 3px solid rgba(255, 0, 0, 1);
+    }
+
+    .roadMap div:last-child {
+        border: none !important;
+    }
+
+    .contentLeft {
+        text-align: left;
+    }
+
+    .bigHeadline {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bigHeadline {
+        font-size: 50px;
+    }
+}
