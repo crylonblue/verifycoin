@@ -25,7 +25,7 @@ export default function Card (props) {
                         </div>
                         <div className={styles.description}>
                             {   
-                                tags.length ? tags.map((tag, index) => {
+                                tags ? tags.map((tag, index) => {
                                     if (index + 1 == tags.length) {
                                         return tag
                                     } else {

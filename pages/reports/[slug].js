@@ -50,7 +50,7 @@ export default function Details({ report }) {
                             <div className={styles.description}>{description}</div>
                             <div className={styles.tagContainer}>
                                 {
-                                    tags.length ? tags.map((tag) => (<a href="#" key={tag}>{tag}</a>)) : ""
+                                    tags ? tags.map((tag) => (<a href="#" key={tag}>{tag}</a>)) : ""
                                 }
                             </div>
                         </div>
@@ -64,7 +64,7 @@ export default function Details({ report }) {
                             <h2>Key metrics:</h2>
                             <div className={styles.metricsContainer}>
                                 {
-                                    metrics.length ? metrics.map((metric) => (
+                                    metrics ? metrics.map((metric) => (
                                         <Metric title={metric.metricName} percent={metric.metricScore} description={metric.metricReasoning} key={metric._key}></Metric>
                                     )) : ""
                                 }
@@ -74,7 +74,7 @@ export default function Details({ report }) {
                             <h2>Links:</h2>
                             <div className={styles.linkContainer}>
                                 {
-                                    links.length ? links.map((link) => (<a href={link.linkUrl} key={link._key}>{link.linkName}</a>)) : ""
+                                    links ? links.map((link) => (<a href={link.linkUrl} key={link._key}>{link.linkName}</a>)) : ""
                                 }
                             </div>
                         </div>
