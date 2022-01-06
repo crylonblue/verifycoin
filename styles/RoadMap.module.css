@@ -71,9 +71,9 @@
     font-size: 180px;
     font-weight: bold;
     overflow: hidden;
-    background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.3));
-    background: linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.3));
-    opacity: 0.2;
+    background: -webkit-linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.2));
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1), rgba(54, 0, 255, 0.2));
+    opacity: 0.4;
     -webkit-background-clip: text;
     background-clip: text;
     font-family: "Spartan", sans-serif;

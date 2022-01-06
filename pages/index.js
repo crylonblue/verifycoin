@@ -41,7 +41,7 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async () => {
-  const query = `*[_type == "report"][0..8]{title, tags, score, image, slug}`
+  const query = `*[_type == "report"][0..8]{title, tags, score, image, slug, riskIndicator}`
   const reports = await sanityClient.fetch(query)
 
   if (!reports.length) {

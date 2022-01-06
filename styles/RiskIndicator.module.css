@@ -1,0 +1,43 @@
+.lowRisk, .mediumRisk, .highRisk, .unknown {
+    padding: 15px 25px;
+    display: inline-block;
+    border-radius: 10px;
+    white-space: nowrap;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.lowRisk {
+    background-color: rgba(68, 235, 68, 0.1);
+    color: #44EB44;
+}
+
+.mediumRisk {
+    background-color: rgba(52, 16, 192, 0.1);
+    color: #3410C0;
+}
+
+.highRisk {
+    background-color: rgba(239, 51, 51, 0.1);
+    color: #EF3333;
+}
+
+.unknown {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #5a5a5a;
+}
+
+@media screen and (max-width: 1028px) {
+    .cardResponsive {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .cardResponsive {
+        font-size: 10px;
+        padding: 8px 10px;
+    }
+}

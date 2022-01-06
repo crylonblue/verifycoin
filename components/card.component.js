@@ -2,6 +2,8 @@ import styles from '../styles/Card.module.css'
 import Link from 'next/link';
 import imageUrlBuilder from '@sanity/image-url'
 import { sanityClient } from '../sanity'
+import Score from './score';
+import RiskIndicator from './riskIndicator';
 
 function parseScore(int) {
     return (Math.round(int * 10) / 10).toFixed(1);
@@ -12,9 +14,11 @@ function urlFor(source) {
     return builder.image(source)
 }
 
+const showRiskIndicator = true;
+
 export default function Card (props) {
     const {report} = props;
-    const {title, tags, score, image, slug} = report;
+    const {title, tags, score, image, slug, riskIndicator} = report;
     return (
         <Link href={"/reports/" + slug.current}>
             <a className={styles.card}>
@@ -34,9 +38,9 @@ export default function Card (props) {
                                 }) : ""
                             }
                         </div>
-                        <div className={styles.score}>
-                            {parseScore(score)}
-                        </div>
+                        {
+                            showRiskIndicator ? (<div className={styles.riskContainer}><RiskIndicator risk={riskIndicator} card={true}></RiskIndicator></div>) : (<Score score={score} card={true}></Score>)
+                        }
                     </div>
                     <div className={styles.cardRight}>
                         <div className={styles.icon}  style={{ backgroundImage: "url('" + urlFor(image).width(200).url() + "')" }}></div>

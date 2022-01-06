@@ -1,0 +1,47 @@
+.score {
+    font-size: 50px;
+    font-weight: bold;
+    background: -webkit-linear-gradient(122deg, #712792, #DA071C);
+    background: linear-gradient(122deg, #712792, #DA071C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+.scoreDescription {
+    font-size: 16px;
+    white-space: nowrap;
+    color: #A2A2A2;
+}
+
+.cardScore {
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 30px;
+    background: -webkit-linear-gradient(122deg, #712792, #DA071C);
+    background: linear-gradient(122deg, #712792, #DA071C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+@media screen and (max-width: 1028px) { 
+    .cardScore {
+        font-size: 40px;
+    }
+}
+
+
+@media screen and (max-width: 1028px) and (min-width: 801px) {
+    .scoreDescription {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cardScore {
+        font-size: 20px;
+    }
+}

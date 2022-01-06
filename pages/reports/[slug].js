@@ -6,26 +6,25 @@ import { sanityClient } from '../../sanity'
 import imageUrlBuilder from '@sanity/image-url'
 import BlockContent from '@sanity/block-content-to-react'
 import ReportSearchBar from '../../components/reportSearchBar.component'
+import Score from '../../components/score'
+import RiskIndicator from '../../components/riskIndicator'
 
 const builder = imageUrlBuilder(sanityClient)
+
 function urlFor(source) {
     return builder.image(source)
 }
 
-function parseScore(int) {
-    return (Math.round(int * 10) / 10).toFixed(1);
-}
-
-
+const showRiskIndicator = true;
 
 export default function Details({ report }) {
-    const { image, title, metrics, description, score, scoreDescription, tags, additionalContent, links} = report;
+    const {image, title, metrics, description, score, scoreDescription, tags, additionalContent, links, riskIndicator} = report;
     
     function getBlockContent() {
         if(additionalContent) {
             return <BlockContent blocks={additionalContent} key={additionalContent._key}/>
         } else {
-            return null;
+            return null
         }
         
     }
@@ -55,8 +54,9 @@ export default function Details({ report }) {
                             </div>
                         </div>
                         <div className={styles.detailsScore}>
-                            <div className={styles.score}>{parseScore(score)}</div>
-                            <div className={styles.scoreDescription}>{scoreDescription}</div>
+                            { 
+                                showRiskIndicator ? (<RiskIndicator risk={riskIndicator}></RiskIndicator>) : (<Score score={score} scoreDescription={scoreDescription}></Score>)
+                            }
                         </div>
                     </div>
                     <div className={styles.statistics}>

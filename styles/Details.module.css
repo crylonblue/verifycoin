@@ -55,23 +55,6 @@
     border-left: 1px solid #DCDCDC;
 }
 
-.score {
-    font-size: 50px;
-    font-weight: bold;
-    background: -webkit-linear-gradient(122deg, #712792, #DA071C);
-    background: linear-gradient(122deg, #712792, #DA071C);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
-.scoreDescription {
-    font-size: 16px;
-    white-space: nowrap;
-    color: #A2A2A2;
-}
-
 .tagContainer {
     margin-top: 40px;
 }
@@ -84,6 +67,7 @@
     border-radius: 30px;
     margin-right: 10px;
     display: inline-block;
+    margin-bottom: 10px;
 }
 
 .statistics {
@@ -130,6 +114,8 @@
     border-radius: 30px;
     margin-right: 10px;
     transition: all .3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .linkContainer a:hover {
@@ -159,10 +145,6 @@
 
     .detailsScore {
         padding: 0 10px;
-    }
-
-    .scoreDescription {
-        font-size: 10px;
     }
 
     .statistics .keymetrics {
