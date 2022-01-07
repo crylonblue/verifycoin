@@ -1,8 +1,7 @@
-
 .cardsContainer {
     overflow: hidden;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
 }
 
 .cardsInner {
@@ -14,7 +13,6 @@
     color: #fff;
     text-align: center;
     font-family: "Spartan", sans-serif;
-    margin-bottom: 75px;
     padding: 50px;
 }
 

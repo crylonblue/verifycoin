@@ -65,7 +65,7 @@ export default function Details({ report }) {
                             <div className={styles.metricsContainer}>
                                 {
                                     metrics ? metrics.map((metric) => (
-                                        <Metric title={metric.metricName} percent={metric.metricScore} description={metric.metricReasoning} key={metric._key}></Metric>
+                                        <Metric title={metric.metricName} percent={metric.metricScore} description={metric.metricBlock} key={metric._key}></Metric>
                                     )) : ""
                                 }
                             </div>

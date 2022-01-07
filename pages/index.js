@@ -6,6 +6,7 @@ import imageUrlBuilder from '@sanity/image-url'
 import CardSlider from '../components/cardSlider.component'
 import SearchBar from '../components/searchBar.component'
 import RoadMap from '../components/roadMap'
+import TextTeaser from '../components/textTeaser'
 
 
 const builder = imageUrlBuilder(sanityClient)
@@ -34,6 +35,7 @@ export default function Home(props) {
         </section>
       </section>
       <CardSlider reports={reports}></CardSlider>
+      <TextTeaser></TextTeaser>
       <RoadMap></RoadMap>
     </div>
   )
