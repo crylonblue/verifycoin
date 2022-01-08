@@ -20,15 +20,6 @@ const showRiskIndicator = true;
 export default function Details({ report }) {
     const {image, title, metrics, description, score, scoreDescription, tags, additionalContent, links, riskIndicator} = report;
     
-    function getBlockContent() {
-        if(additionalContent) {
-            return <BlockContent blocks={additionalContent} key={additionalContent._key}/>
-        } else {
-            return null
-        }
-        
-    }
-    
     return (<div className={styles.container}>
         <Head>
             <title>verifycoin</title>
@@ -77,10 +68,12 @@ export default function Details({ report }) {
                                     links ? links.map((link) => (<a href={link.linkUrl} key={link._key}>{link.linkName}</a>)) : ""
                                 }
                             </div>
+                            <div className={styles.additionalContent}>
+                                {
+                                    additionalContent ? <BlockContent blocks={additionalContent} key={additionalContent._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}}/> : ""
+                                }
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.additionalContent}>
-                        {getBlockContent()}
                     </div>
                 </section>
             </section>

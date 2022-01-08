@@ -106,6 +106,18 @@
     margin-top: 50px;
 }
 
+.additionalContent {
+    margin-top: 75px;
+}
+
+.additionalContent h2 {
+    margin-bottom: 50px;
+}
+
+.additionalContent img {
+    width: 100%;
+}
+
 .linkContainer a {
     text-decoration: none;
     color: #000;
