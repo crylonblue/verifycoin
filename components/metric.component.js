@@ -47,7 +47,7 @@ export default function Metric(props) {
                     </div>
                     <div className={styles.accordionDescription + (active ? " " + styles.active : " " + styles.hidden)}>
                         {
-                            description ? <BlockContent blocks={description} key={description._key}/> : ""
+                            description ? <BlockContent blocks={description} key={description._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}}/> : ""
                         }
                     </div>
                 </div>

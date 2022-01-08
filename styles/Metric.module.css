@@ -67,6 +67,10 @@
     color: #6258E1;
 }
 
+.accordion .accordionDescription img {
+    width: 100%;
+}
+
 .active {
     display: block;
 }
