@@ -15,6 +15,14 @@ function urlFor(source) {
     return builder.image(source)
 }
 
+const serializers = {
+    types: {
+      code: (props) => (
+        <div dangerouslySetInnerHTML={{__html: props.node.code}}></div>
+      ),
+    },
+}
+
 const showRiskIndicator = true;
 
 export default function Details({ report }) {
@@ -70,7 +78,7 @@ export default function Details({ report }) {
                             </div>
                             <div className={styles.additionalContent}>
                                 {
-                                    additionalContent ? <BlockContent blocks={additionalContent} key={additionalContent._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}}/> : ""
+                                    additionalContent ? <BlockContent blocks={additionalContent} key={additionalContent._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}} serializers={serializers}/> : ""
                                 }
                             </div>
                         </div>
