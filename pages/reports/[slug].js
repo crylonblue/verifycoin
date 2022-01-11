@@ -8,6 +8,7 @@ import BlockContent from '@sanity/block-content-to-react'
 import ReportSearchBar from '../../components/reportSearchBar.component'
 import Score from '../../components/score'
 import RiskIndicator from '../../components/riskIndicator'
+import { serializers } from '../../misc/serializer'
 
 const builder = imageUrlBuilder(sanityClient)
 
@@ -15,19 +16,11 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-const serializers = {
-    types: {
-      code: (props) => (
-        <div dangerouslySetInnerHTML={{__html: props.node.code}}></div>
-      ),
-    },
-}
-
 const showRiskIndicator = true;
 
 export default function Details({ report }) {
-    const {image, title, metrics, description, score, scoreDescription, tags, additionalContent, links, riskIndicator} = report;
-    
+    const { image, title, metrics, description, score, scoreDescription, tags, additionalContent, links, riskIndicator } = report;
+
     return (<div className={styles.container}>
         <Head>
             <title>verifycoin</title>
@@ -53,7 +46,7 @@ export default function Details({ report }) {
                             </div>
                         </div>
                         <div className={styles.detailsScore}>
-                            { 
+                            {
                                 showRiskIndicator ? (<RiskIndicator risk={riskIndicator}></RiskIndicator>) : (<Score score={score} scoreDescription={scoreDescription}></Score>)
                             }
                         </div>
@@ -78,7 +71,7 @@ export default function Details({ report }) {
                             </div>
                             <div className={styles.additionalContent}>
                                 {
-                                    additionalContent ? <BlockContent blocks={additionalContent} key={additionalContent._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}} serializers={serializers}/> : ""
+                                    additionalContent ? <BlockContent blocks={additionalContent} key={additionalContent._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{ width: 800 }} serializers={serializers} /> : ""
                                 }
                             </div>
                         </div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion';
 import InfoBubble from './infoBubble';
 import BlockContent from '@sanity/block-content-to-react'
+import { serializers } from '../misc/serializer';
 
 function getHintByCategory(category) {
     switch (category) {
@@ -47,7 +48,7 @@ export default function Metric(props) {
                     </div>
                     <div className={styles.accordionDescription + (active ? " " + styles.active : " " + styles.hidden)}>
                         {
-                            description ? <BlockContent blocks={description} key={description._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}}/> : ""
+                            description ? <BlockContent blocks={description} key={description._key} projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID} dataset={process.env.NEXT_PUBLIC_SANITY_DATASET} imageOptions={{width: 800}} serializers={serializers}/> : ""
                         }
                     </div>
                 </div>
