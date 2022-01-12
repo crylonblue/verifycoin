@@ -1,8 +1,9 @@
-import { Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement} from 'chart.js'
+import { Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, TimeScale } from 'chart.js'
 import { Doughnut, Line } from 'react-chartjs-2'
 import ChartDataLabels from 'chartjs-plugin-datalabels';
+import 'chartjs-adapter-moment';
 
-Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, ChartDataLabels);
+Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, ChartDataLabels, TimeScale);
 
 const colorPalette = [
     "#003f5c",
@@ -44,17 +45,37 @@ export const serializers = {
                         font: {
                             family: "Spartan"
                         },
-                        formatter: function(value, context) {
-                            return value.toLocaleString("en-US", {minimumFactorDigits: 2})
+                        formatter: function (value, context) {
+                            return value.toLocaleString("en-US", { minimumFactorDigits: 2 })
                         }
                     }
                 }
-            }}/>
+            }} />
         ),
-        lineChart: (props) => (
-            <Line
-                datasetIdKey='id'
-                data={{
+        lineChart: (props) => {
+            let data = []
+            if (props.node.lineChartData[0].arrayData.useArray) {
+                let labelData = JSON.parse(props.node.lineChartData[0].arrayData.data.replace(/'/g, '"'))
+                data = {
+                    labels: labelData.map((point) => { return point[0] }),
+                    datasets: props.node.lineChartData.map((line, index) => {
+                        let tempData = JSON.parse(line.arrayData.data.replace(/'/g, '"'))
+                        return {
+                            id: line._key,
+                            label: line.lineName,
+                            data: tempData.map((point) => {
+                                return parseInt(point[1]) || 0
+                            }),
+                            borderColor: colorPalette[index],
+                            backgroundColor: colorPalette[index],
+                            datalabels: {
+                                display: false
+                            }
+                        }
+                    })
+                }
+            } else {
+                data = {
                     labels: props.node.lineChartData[0].lineData.map((point) => { return point.label }),
                     datasets: props.node.lineChartData.map((line, index) => {
                         return {
@@ -64,24 +85,25 @@ export const serializers = {
                                 return point.value
                             }),
                             borderColor: colorPalette[index],
-                            backgroundColor: colorPalette[index],
-                            datalabels: {
-                                color: 'white',
-                                labels: {
-                                    title: {
-                                        color: "white"
-                                    }
-                                }
-                            }
+                            backgroundColor: colorPalette[index]
                         }
                     }),
-                }} options={{
+                }
+            }
+
+            return <Line
+                datasetIdKey='id'
+                data={data} options={{
                     interaction: {
                         mode: 'index',
                         intersect: false,
+                    },
+                    downsample: {
+                        enabled: true,
+                        threshold: 100
                     }
                 }}
             />
-        )
+        }
     }
 }
