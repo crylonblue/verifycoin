@@ -85,7 +85,10 @@ export const serializers = {
                                 return point.value
                             }),
                             borderColor: colorPalette[index],
-                            backgroundColor: colorPalette[index]
+                            backgroundColor: colorPalette[index],
+                            datalabels: {
+                                display: false
+                            }
                         }
                     }),
                 }
