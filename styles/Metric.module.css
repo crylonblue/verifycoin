@@ -55,19 +55,20 @@
     text-align: center;
 }
 
-.accordion .accordionDescription {
+.accordionDescription {
     font-size: 12px;
     color: #666;
-    padding-top: 20px;
+    padding: 20px;
     overflow: hidden;
     word-break: break-word;
+    border-bottom: 1px solid #ECECEC;
 }
 
-.accordion .accordionDescription a {
+.accordionDescription a {
     color: #6258E1;
 }
 
-.accordion .accordionDescription img {
+.accordionDescription img {
     width: 100%;
 }
 

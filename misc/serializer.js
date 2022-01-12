@@ -1,6 +1,8 @@
 import { Chart, ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement} from 'chart.js'
-Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement);
 import { Doughnut, Line } from 'react-chartjs-2'
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+Chart.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, PointElement, LineElement, ChartDataLabels);
 
 const colorPalette = [
     "#003f5c",
@@ -23,7 +25,8 @@ export const serializers = {
                         data: props.node.donutChartData.map((point) => { return point.value }),
                         backgroundColor: colorPalette,
                         hoverOffset: 4,
-                        labels: ""
+                        labels: "",
+                        color: "#fff"
                     }
                 ]
             }} options={{
@@ -35,6 +38,15 @@ export const serializers = {
                                 return item.label + " " + ((item.raw / total) * 100).toFixed(2) + "%";
                             }
                         },
+                    },
+                    datalabels: {
+                        color: "#fff",
+                        font: {
+                            family: "Spartan"
+                        },
+                        formatter: function(value, context) {
+                            return value.toLocaleString("en-US", {minimumFactorDigits: 2})
+                        }
                     }
                 }
             }}/>
@@ -52,7 +64,15 @@ export const serializers = {
                                 return point.value
                             }),
                             borderColor: colorPalette[index],
-                            backgroundColor: colorPalette[index]
+                            backgroundColor: colorPalette[index],
+                            datalabels: {
+                                color: 'white',
+                                labels: {
+                                    title: {
+                                        color: "white"
+                                    }
+                                }
+                            }
                         }
                     }),
                 }} options={{
