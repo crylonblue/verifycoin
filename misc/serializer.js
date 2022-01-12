@@ -54,7 +54,7 @@ export const serializers = {
         ),
         lineChart: (props) => {
             let data = []
-            if (props.node.lineChartData[0].arrayData.useArray) {
+            if (props.node.lineChartData[0].arrayData.useArray == true) {
                 let labelData = JSON.parse(props.node.lineChartData[0].arrayData.data.replace(/'/g, '"'))
                 data = {
                     labels: labelData.map((point) => { return point[0] }),
