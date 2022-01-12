@@ -54,7 +54,7 @@ export const serializers = {
         ),
         lineChart: (props) => {
             let data = []
-            if (props.node.lineChartData[0].arrayData.useArray == true) {
+            if (props.node.lineChartData[0]?.arrayData?.useArray == true && props.node.lineChartData[0]?.arrayData?.data) {
                 let labelData = JSON.parse(props.node.lineChartData[0].arrayData.data.replace(/'/g, '"'))
                 data = {
                     labels: labelData.map((point) => { return point[0] }),
@@ -76,12 +76,12 @@ export const serializers = {
                 }
             } else {
                 data = {
-                    labels: props.node.lineChartData[0].lineData.map((point) => { return point.label }),
-                    datasets: props.node.lineChartData.map((line, index) => {
+                    labels: props.node.lineChartData[0].lineData?.map((point) => { return point.label }),
+                    datasets: props.node.lineChartData?.map((line, index) => {
                         return {
                             id: line._key,
                             label: line.lineName,
-                            data: line.lineData.map((point) => {
+                            data: line.lineData?.map((point) => {
                                 return point.value
                             }),
                             borderColor: colorPalette[index],
