@@ -19,7 +19,7 @@ export const serializers = {
             <div dangerouslySetInnerHTML={{ __html: props.node.code }}></div>
         ),
         donutChart: (props) => (
-            <Doughnut data={{
+            <div style={{paddingTop: "40px", paddingBottom: "40px", maxWidth: "400px", margin: "0 auto"}}><Doughnut data={{
                 labels: props.node.donutChartData.map((point) => { return point.label }),
                 datasets: [
                     {
@@ -50,7 +50,7 @@ export const serializers = {
                         }
                     }
                 }
-            }} />
+            }} /></div>
         ),
         lineChart: (props) => {
             let data = []
@@ -94,7 +94,7 @@ export const serializers = {
                 }
             }
 
-            return <Line
+            return <div style={{paddingTop: "20px", paddingBottom: "25px"}}><Line
                 datasetIdKey='id'
                 data={data} options={{
                     interaction: {
@@ -106,7 +106,7 @@ export const serializers = {
                         threshold: 100
                     }
                 }}
-            />
+            /></div>
         }
     }
 }
