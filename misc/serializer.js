@@ -43,7 +43,8 @@ export const serializers = {
                     datalabels: {
                         color: "#fff",
                         font: {
-                            family: "Spartan"
+                            family: "Spartan",
+                            size: 8
                         },
                         formatter: function (value, context) {
                             return value.toLocaleString("en-US", { minimumFactorDigits: 2 })
