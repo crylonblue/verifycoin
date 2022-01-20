@@ -11,6 +11,7 @@ export default function Navigation() {
             </Link>
         </div>
         <ul className={styles.navigationList}>
+            <li><Link href="/explore">explore</Link></li>
             <li><Link href="https://docs.verifycoin.io/">docs</Link></li>
         </ul>
     </nav>
