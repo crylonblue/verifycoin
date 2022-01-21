@@ -23,8 +23,8 @@ export default function Details({ report }) {
 
     return (<div className={styles.container}>
         <Head>
-            <title>verifycoin</title>
-            <meta name="description" content="verifycoin" />
+            <title>{title} - Short report</title>
+            <meta name="description" content={description} />
         </Head>
         <section className={styles.main}>
             <Navigation></Navigation>

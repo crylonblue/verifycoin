@@ -21,7 +21,7 @@ export default function Home(props) {
     <div className={styles.container}>
       <Head>
         <title>verifycoin</title>
-        <meta name="description" content="verifycoin" />
+        <meta name="description" content="Expert reports for cryptoprojects | verifycoin" />
       </Head>
       <section className={styles.main}>
         <Navigation></Navigation>

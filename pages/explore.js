@@ -9,8 +9,8 @@ export default function Explore(props) {
   const {reports} = props
   return <div className={styles.container}>
     <Head>
-      <title>verifycoin</title>
-      <meta name="description" contet="verifycoin" />
+      <title>Explore reports</title>
+      <meta name="description" content="Explore all our reports" />
     </Head>
     <section className={styles.main}>
       <Navigation></Navigation>
