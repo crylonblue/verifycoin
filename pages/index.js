@@ -27,10 +27,10 @@ export default function Home(props) {
         <Navigation></Navigation>
         <section className={styles.teaser}>
           <div className={styles.aligner}>
-            <div className={styles.top}>Helping the movement.</div>
-            <div className={styles.headline}>Helping people understand.</div>
+            <div className={styles.top}>EXPERT OPINIONS ON PROJECTS.</div>
+            <div className={styles.headline}>Web3 – but easier.</div>
             <SearchBar></SearchBar>
-            <div className={styles.description}>Fraud protection for everyone. Check for crypto project safety instantly.</div>
+            <div className={styles.description}>High quality reports for crypto projects.</div>
           </div>
         </section>
       </section>
