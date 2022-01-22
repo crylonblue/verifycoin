@@ -1,6 +1,6 @@
 .container {
     background: rgb(70,24,24);
-    background: linear-gradient(155deg, rgba(34,24,70,0.9) 0%, rgba(196, 157, 150, 0.83) 53%, rgba(12,13,17,0) 100%);
+    background: linear-gradient(155deg, rgba(34,24,70,0.9) 0%, rgba(46,23,19,0.83) 53%, rgba(12,13,17,0) 100%);
     font-family: "Spartan", sans-serif;
 }
 
