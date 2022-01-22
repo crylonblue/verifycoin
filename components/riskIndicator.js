@@ -13,6 +13,6 @@ export default function RiskIndicator(props) {
             return <div className={styles.highRisk + (card ? " " + styles.cardResponsive : "")}>high risk</div>
     }
 
-    return <div className={styles.unknown + (card ? " " + styles.cardResponsive : "")}>unknown</div>
+    return <div className={styles.unknown + (card ? " " + styles.cardResponsive : "")}>coming up</div>
 
 }
