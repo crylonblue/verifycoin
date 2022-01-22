@@ -7,12 +7,15 @@
     max-width: 1440px;
     justify-content: space-between;
     align-items: center;
-    background-color: #14121C;
+    background-color: #0E0D1C;
     margin-top: 300px;
+    border-top: 1px solid #1b2352;
+    box-shadow: 0px 0px 40px rgba(46, 41, 92, 0.6);
 }
 
 .legals {
     width: 200px;
+    line-height: 1.5em;
 }
 
 .logo, .legals, .socials {
