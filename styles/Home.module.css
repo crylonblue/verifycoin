@@ -6,6 +6,7 @@
   background-size: contain;
   background-position: center right;
   background-repeat: no-repeat;
+  margin-bottom: 100px;
 }
 
 .teaser {
@@ -14,7 +15,7 @@
   padding: 0 50px;
   max-width: 1440px;
   text-align: center;
-  height: calc(100vh - 300px);
+  height: calc(100vh - 150px);
   display: flex;
   align-items: center;
   justify-content: center;

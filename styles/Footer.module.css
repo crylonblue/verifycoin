@@ -1,0 +1,43 @@
+.footer {
+    display: flex;
+    color: #666;
+    font-family: "Spartan", sans-serif;
+    font-size: 12px;
+    padding: 100px 50px;
+    max-width: 1440px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #41197A;
+    background: #100E22;
+    margin-top: 300px;
+}
+
+.legals {
+    width: 200px;
+}
+
+.logo, .legals, .socials {
+    padding: 15px 0 15px 0;
+}
+
+.socials {
+    display: flex;
+    width: 200px;
+    justify-content: flex-end;
+}
+
+.social {
+    display: inline-block;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+}

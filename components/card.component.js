@@ -19,8 +19,9 @@ const showRiskIndicator = true;
 export default function Card (props) {
     const {report} = props;
     const {title, tags, score, image, slug, riskIndicator} = report;
+    const linkUrl = slug ? "/reports/" + slug.current : "#";
     return (
-        <Link href={"/reports/" + slug.current}>
+        <Link href={linkUrl}>
             <a className={styles.card}>
                 <div className={styles.cardInner}>
                     <div className={styles.cardLeft}>

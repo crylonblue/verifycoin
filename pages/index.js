@@ -7,6 +7,7 @@ import CardSlider from '../components/cardSlider.component'
 import SearchBar from '../components/searchBar.component'
 import RoadMap from '../components/roadMap'
 import TextTeaser from '../components/textTeaser'
+import Footer from '../components/footer.component'
 
 
 const builder = imageUrlBuilder(sanityClient)
@@ -16,7 +17,8 @@ function urlFor(source) {
 
 
 export default function Home(props) {
-  const {reports} =  props;
+  const {reports, comingUp} =  props;
+  console.log(comingUp)
   return (
     <div className={styles.container}>
       <Head>
@@ -34,17 +36,22 @@ export default function Home(props) {
           </div>
         </section>
       </section>
-      <CardSlider reports={reports}></CardSlider>
+      <CardSlider reports={reports} headline="Latest reviews"></CardSlider>
       <TextTeaser></TextTeaser>
       <RoadMap></RoadMap>
+      <CardSlider reports={comingUp} headline="Coming up"></CardSlider>
+      <Footer></Footer>
     </div>
   )
 }
 
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const query = `*[_type == "report"][0..8]{title, tags, score, image, slug, riskIndicator}`
   const reports = await sanityClient.fetch(query)
+  
+  const comingUpQuery = `*[_type == "comingUp"][0..8]{title, image, description}`
+  const comingUp = await sanityClient.fetch(comingUpQuery)
 
   if (!reports.length) {
       return {
@@ -55,7 +62,8 @@ export const getServerSideProps = async () => {
 
   return {
       props: {
-          reports: reports
+          reports: reports,
+          comingUp: comingUp
       }
   }
 }

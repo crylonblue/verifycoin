@@ -1,6 +1,6 @@
 .cardsContainer {
     overflow: hidden;
-    margin-top: 100px;
+    margin-top: 50px;
     margin-bottom: 200px;
 }
 
@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 1028px) {
     .cardsContainer {
-        margin-top: 150px;
+        margin-top: 0px;
     }
 
     .cardsTitle {
@@ -30,7 +30,7 @@
 
 @media screen and (max-width: 480px) {
     .cardsContainer {
-        margin-top: 50px;
+        margin-top: 0;
     }
 
     .cardsTitle {
