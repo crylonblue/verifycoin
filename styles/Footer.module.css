@@ -3,12 +3,11 @@
     color: #666;
     font-family: "Spartan", sans-serif;
     font-size: 12px;
-    padding: 100px 50px;
+    padding: 60px 50px;
     max-width: 1440px;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #41197A;
-    background: #100E22;
+    background-color: #14121C;
     margin-top: 300px;
 }
 

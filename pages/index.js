@@ -18,7 +18,6 @@ function urlFor(source) {
 
 export default function Home(props) {
   const {reports, comingUp} =  props;
-  console.log(comingUp)
   return (
     <div className={styles.container}>
       <Head>

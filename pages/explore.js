@@ -3,9 +3,9 @@ import styles from '../styles/Explore.module.css'
 import Navigation from '../components/navigation.component'
 import { sanityClient } from '../sanity'
 import ListItem from '../components/listItem.component'
+import Footer from '../components/footer.component'
 
 export default function Explore(props) {
-  console.log(props)
   const {reports} = props
   return <div className={styles.container}>
     <Head>
@@ -22,6 +22,7 @@ export default function Explore(props) {
           }
       </section>
     </section>
+    <Footer></Footer>
   </div>
 }
 
