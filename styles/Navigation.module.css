@@ -11,6 +11,7 @@ nav.navigation {
 nav.navigation .logo {
     display: inline-block;
     vertical-align: middle;
+    z-index: 7;
 }
 
 nav.navigation .navigationList {
@@ -30,9 +31,73 @@ nav.navigation .navigationList li:first-child {
     margin: 0px !important;
 }
 
+.burgerMenu {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    nav.navigation { 
+        padding: 25px;
+    }
+
+    nav.navigation .navigationList li {
+        display: none;
+    }
+
+    .burgerMenu {
+        display: inline-block;
+        cursor: pointer;
+        height: 25px;
+        position: relative;
+        z-index: 7
+    }
+
+    .burgerMenu div {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+    }
+
+    .burgerMenu div:first-child {
+        margin-top: 7px;
+        margin-bottom: 6px;
+    }
+
+    .mobileMenu {
+        display: block;
+        position: absolute;
+        z-index: 6;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(155deg, rgba(34,24,70) 0%, rgba(46,23,19) 53%, rgba(12,13,17) 100%);
+        transform: translateX(100%);
+        padding: 200px 50px 0 50px;
+        opacity: 0
+    }
+
+    .mobileMenu .mobileMenuItem {
+        font-family: "Spartan", sans-serif;
+        font-size: 50px;
+        cursor: pointer;
+        display: block;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+}
+
 
 @media screen and (max-width: 480px) {
     nav.navigation {
         padding: 25px;
+    }
+    
+    .mobileMenu {
+        padding: 200px 25px 0 25px;
     }
 }
