@@ -6,6 +6,7 @@ nav.navigation {
     flex-direction: row;
     align-items: center;
     color: #fff;
+    overflow-x: hidden;
 }
 
 nav.navigation .logo {
