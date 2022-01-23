@@ -94,7 +94,7 @@ export default function Navigation() {
             <motion.a className={styles.mobileMenuItem} variants={textVariants} animate={ burgerOpen ? "opened" : "closed"} href="/">home</motion.a>
             {
                 navItems.map(({text, href}, i) => {
-                    return <motion.a className={styles.mobileMenuItem} variants={textVariants} animate={ burgerOpen ? "opened" : "closed"} href={href}>{text}</motion.a>
+                    return <motion.a className={styles.mobileMenuItem} variants={textVariants} animate={ burgerOpen ? "opened" : "closed"} href={href} key={i}>{text}</motion.a>
                 })
             }
 
