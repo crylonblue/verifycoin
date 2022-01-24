@@ -12,7 +12,12 @@ NProgress.configure({
 });
 
 Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeComplete', () => {
+  NProgress.done()
+  window.gtag('config', 'GTM-KM58M3J', {
+    page_path: url,
+  });
+});
 Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
