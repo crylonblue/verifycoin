@@ -3,6 +3,8 @@ import Head from 'next/head'
 import NProgress from 'nprogress';
 import "nprogress/nprogress.css";
 import Router from 'next/router';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react'
 
 NProgress.configure({
   minimum: 0.3,
@@ -12,12 +14,15 @@ NProgress.configure({
 });
 
 Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => {
+Router.events.on('routeChangeComplete', (url) => {
   NProgress.done()
-  window.gtag('config', 'GTM-KM58M3J', {
-    page_path: url,
-  });
+  if (typeof window.gtag !== 'undefined') {
+    window.gtag('config', 'GTM-KM58M3J', {
+      page_path: url,
+    });
+  }
 });
+
 Router.events.on('routeChangeError', () => NProgress.done());
 
 function MyApp({ Component, pageProps }) {
