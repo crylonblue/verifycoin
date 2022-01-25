@@ -10,7 +10,7 @@ export default function Footer() {
             </div>
             <div className={styles.logo}><Image src="/verifycoin.svg" alt="verifycoin logo" width={186} height={37} /></div>
             <div className={styles.socials}>
-                <div className={styles.social}><Image src="/discord.svg" alt="discord logo" width={36} height={27} /></div>
+                <a className={styles.social} href="https://discord.gg/z527pfpP" target="_blank"><Image src="/discord.svg" alt="discord logo" width={36} height={27} /></a>
             </div>
         </div>
     </footer>
